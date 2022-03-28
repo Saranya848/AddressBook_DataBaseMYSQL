@@ -20,4 +20,47 @@ Query OK, 1 row affected (0.17 sec)
 
 mysql> use Address_Book_Service;
 Database changed
+mysql> Create Table addressbook (id int not null auto_increment, firstName char(100), lastName char(100), address char(200), city char(100), state char(100), zip int (100), phoneNumber int (300), email char(100), Primary Key(id));
+ERROR 1439 (42000): Display width out of range for column 'phoneNumber' (max = 255)
+mysql> Create Table addressbook (id int not null auto_increment, firstName char(100), lastName char(100), address char(200), city char(100), state char(100), zip int (100), phoneNumber int (255), email char(100), Primary Key(id));
+Query OK, 0 rows affected, 2 warnings (1.64 sec)
+
+mysql> desc addressbook;
++-------------+-----------+------+-----+---------+----------------+
+| Field       | Type      | Null | Key | Default | Extra          |
++-------------+-----------+------+-----+---------+----------------+
+| id          | int       | NO   | PRI | NULL    | auto_increment |
+| firstName   | char(100) | YES  |     | NULL    |                |
+| lastName    | char(100) | YES  |     | NULL    |                |
+| address     | char(200) | YES  |     | NULL    |                |
+| city        | char(100) | YES  |     | NULL    |                |
+| state       | char(100) | YES  |     | NULL    |                |
+| zip         | int       | YES  |     | NULL    |                |
+| phoneNumber | int       | YES  |     | NULL    |                |
+| email       | char(100) | YES  |     | NULL    |                |
++-------------+-----------+------+-----+---------+----------------+
+9 rows in set (0.09 sec)
+
+mysql> DROP TABLE addressbook;
+Query OK, 0 rows affected (1.14 sec)
+
+mysql> create table addressbook (id int not null auto_increment, FirstName varchar(50) not null, LastName varchar(50) not null, Address varchar(50) not null, City varchar(50) not null, State varchar(70) not null, ZipCode varchar(20) not null, PhoneNumber varchar(30) not null, Email varchar(50) not null, Primary Key(id));
+Query OK, 0 rows affected (1.83 sec)
+
+mysql> desc addressbook;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| id          | int         | NO   | PRI | NULL    | auto_increment |
+| FirstName   | varchar(50) | NO   |     | NULL    |                |
+| LastName    | varchar(50) | NO   |     | NULL    |                |
+| Address     | varchar(50) | NO   |     | NULL    |                |
+| City        | varchar(50) | NO   |     | NULL    |                |
+| State       | varchar(70) | NO   |     | NULL    |                |
+| ZipCode     | varchar(20) | NO   |     | NULL    |                |
+| PhoneNumber | varchar(30) | NO   |     | NULL    |                |
+| Email       | varchar(50) | NO   |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+9 rows in set (0.08 sec)
+
 mysql>
