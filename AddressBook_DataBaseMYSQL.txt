@@ -63,4 +63,23 @@ mysql> desc addressbook;
 +-------------+-------------+------+-----+---------+----------------+
 9 rows in set (0.08 sec)
 
+mysql> insert into addressbook (FirstName, LastName, Address, City, State, ZipCode, PhoneNumber, Email) values ('Saranya', 'Siripurapu', 'Vizianagaram', 'Vizianagaram', 'AndhraPradesh', '535102', '9703170708', 'saranya@gmail.com');
+Query OK, 1 row affected (0.11 sec)
+
+mysql> insert into addressbook (FirstName, LastName, Address, City, State, ZipCode, PhoneNumber, Email) values ('Naresh', 'Boddepalli', 'Vizianagaram', 'Vizianagaram', 'AndhraPradesh', '535102', '9703108770', 'naresh123b@gmail.com');
+Query OK, 1 row affected (0.14 sec)
+
+mysql> insert into addressbook (FirstName, LastName, Address, City, State, ZipCode, PhoneNumber, Email) values ('Rajesh', 'Tadde', 'Vizianagaram', 'Vizianagaram', 'AndhraPradesh', '535102', '7031058630', 'rajesh88t@gmail.com');
+Query OK, 1 row affected (0.12 sec)
+
+mysql> select * from addressbook;
++----+-----------+------------+--------------+--------------+---------------+---------+-------------+----------------------+
+| id | FirstName | LastName   | Address      | City         | State         | ZipCode | PhoneNumber | Email                |
++----+-----------+------------+--------------+--------------+---------------+---------+-------------+----------------------+
+|  1 | Saranya   | Siripurapu | Vizianagaram | Vizianagaram | AndhraPradesh | 535102  | 9703170708  | saranya@gmail.com    |
+|  2 | Naresh    | Boddepalli | Vizianagaram | Vizianagaram | AndhraPradesh | 535102  | 9703108770  | naresh123b@gmail.com |
+|  3 | Rajesh    | Tadde      | Vizianagaram | Vizianagaram | AndhraPradesh | 535102  | 7031058630  | rajesh88t@gmail.com  |
++----+-----------+------------+--------------+--------------+---------------+---------+-------------+----------------------+
+3 rows in set (0.00 sec)
+
 mysql>
