@@ -1,0 +1,23 @@
+Microsoft Windows [Version 10.0.19044.1586]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\king>mysql -u root -p
+Enter password: ***********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.28 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database Address_Book_Service;
+Query OK, 1 row affected (0.17 sec)
+
+mysql> use Address_Book_Service;
+Database changed
+mysql>
